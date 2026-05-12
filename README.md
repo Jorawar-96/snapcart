@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 Snapcart
 
-## Getting Started
+> A modern, high-performance E-Commerce web application built with [Next.js](https://nextjs.org/).
 
-First, run the development server:
+Snapcart is a full-featured e-commerce platform designed to provide a seamless shopping experience. It leverages the power of the Next.js App Router, React Server Components, and modern web development practices to deliver fast page loads and dynamic rendering.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+
+- **🛍️ Product Browsing:** View diverse product catalogs with dynamic routing and filtering.
+- **🛒 Shopping Cart:** Add, update, or remove items from the cart seamlessly.
+- **🔐 Authentication:** Secure user sign-up and login capabilities.
+- **💳 Checkout Process:** Streamlined user checkout flow.
+- **⚡ Optimized Performance:** Image optimization, static pre-rendering, and server-side rendering using Next.js.
+- **📱 Responsive Design:** Fully responsive UI, built to work smoothly across desktop, tablet, and mobile devices.
+
+## 🛠️ Tech Stack
+
+-**Frontend:** Next.js (App Router), Tailwind CSS
+- **Backend:** Next.js API Routes (Node.js)
+- **Database:** MongoDB Atlas, Mongoose
+- **Authentication:** Next-Auth 
+- **Animations:** Framer Motion, GSAP 
+- **Testing:** Cypress (E2E & Component Testing)
+- **Tooling:** ESLint, Prettier
+
+## 🚀 Getting Started
+
+Follow these instructions to set up the project locally on your machine.
+
+### Prerequisites
+
+Make sure you have [Node.js](https://nodejs.org/) installed (v18.17 or higher is recommended for Next.js).
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-url>
+   cd snapcart
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or yarn install / pnpm install / bun install
+   ```
+
+3. **Set up Environment Variables:**
+   Create a `.env.local` file in the root directory and add your specific environment variables:
+   ```bash
+   # Example environment variables
+   NEXT_PUBLIC_API_URL=http://localhost:3000/api
+   DATABASE_URL=your_database_url
+   ```
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   # or yarn dev / pnpm dev / bun dev
+   ```
+
+5. **Open the application:**
+   Open http://localhost:3000 with your browser to see the result.
+
+## 📁 Project Structure
+
+```text
+snapcart/
+├── app/                # Next.js App Router (pages, layouts, and API routes)
+├── components/         # Reusable React components (UI, layout, etc.)
+├── lib/                # Utility functions, helpers, and configurations
+├── public/             # Static assets (images, fonts, icons)
+├── styles/             # Global styles and tailwind config
+├── .env.local          # Environment variables (Ignored by Git)
+├── next.config.js      # Next.js configuration
+└── package.json        # Project metadata and dependencies
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧪 Testing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is configured with Cypress for End-to-End (E2E) and Component Testing.
+To open the Cypress test runner, use:
+```bash
+npm run cypress:open
+```
